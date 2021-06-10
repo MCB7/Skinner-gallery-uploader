@@ -1,0 +1,38 @@
+.footer__contents {
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  background-color: var(--lightNav);
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+.footer > svg {
+  height: 32px;
+  width: 32px;
+  stroke: var(--lightBg);
+  padding: 8px;
+}
+
+.disclaimer__content {
+  background-color: var(--lightNav);
+  display: flex;
+}
+
+.disclaimer__text {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  font-size: 10px;
+  max-width: 75%;
+  color: white;
+  padding-bottom: 12px;
+}

@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reduxThunk from 'redux-thunk';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
 
+import './index.css';
+
+import reducers from './redux/reducers';
+import App from './components/App/App';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+//the store holds all of the state.
+const store = createStore(
+  reducers,
+  composeEnhancers(applyMiddleware(reduxThunk))
+);
+
+//the app has to be wrapped in w provider. this is just basic react redux setup.
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

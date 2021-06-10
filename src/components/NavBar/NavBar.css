@@ -1,0 +1,32 @@
+.navbar {
+  background-color: var(--lightNav);
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+}
+
+.navbar button {
+  border: none;
+  outline: none;
+}
+
+button.navbar-toggler:focus {
+  outline: 1px none;
+  box-shadow: none !important;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.navbar h1 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-left: 40px;
+  color: white;
+  font-size: 24px;
+}
