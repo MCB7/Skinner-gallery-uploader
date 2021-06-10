@@ -10,8 +10,7 @@ import { Link } from 'react-router-dom';
 function Landing() {
   return (
     <div className='mainSite'>
-      <Header />
-      <main>
+      <div className='main'>
         {/* eventually tthe city and candidate variables will be passed in 
         however for now we'll use statics until it looks correct */}
         <p>
@@ -22,7 +21,7 @@ function Landing() {
           <Link to={'/city'}>city</Link>
         </p>
         Content Here For Trial
-      </main>
+      </div>
       <Footer />
     </div>
   );

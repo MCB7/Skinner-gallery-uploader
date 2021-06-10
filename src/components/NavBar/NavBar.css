@@ -6,6 +6,10 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .navbar button {
@@ -14,7 +18,7 @@
 }
 
 button.navbar-toggler:focus {
-  outline: 1px none;
+  outline: 1px none !important;
   box-shadow: none !important;
 }
 

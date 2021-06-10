@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //this is the Bav bar and will not need to be loaded anywhere except in app.js
 // because it sits above the Link tags inside the browserRouter tag it will render on top
@@ -17,7 +17,7 @@ const Navigation = () => {
           <span className='text-muted'>Toggleable via the navbar brand.</span>
         </div>
       </div>
-      <nav className='navbar navbar-dark '>
+      <nav className='navbar  navbar-dark '>
         <button
           className='navbar-toggler'
           type='button'
@@ -29,9 +29,9 @@ const Navigation = () => {
         >
           <span className='navbar-toggler-icon'></span>
         </button>
-        <NavLink to='/'>
+        <Link to='/'>
           <h1 className='purple__choice'>Purple Choice</h1>
-        </NavLink>
+        </Link>
       </nav>
     </div>
   );

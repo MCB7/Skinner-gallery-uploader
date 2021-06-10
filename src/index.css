@@ -34,9 +34,13 @@ code {
     monospace;
 }
 
-main {
-  height: 80vh;
-  width: 35vh;
+.main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  position: relative;
+  height: 88vh;
 }
 
 svg {

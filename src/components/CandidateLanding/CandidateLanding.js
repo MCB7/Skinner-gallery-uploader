@@ -18,7 +18,7 @@ const CandidateLanding = (props) => {
   return (
     <div>
       <Header />
-      <main>
+      <div className='main'>
         {/* <Image src={this.props.profileImagePath} roundedCircle /> */}
         {/* <h1>{this.props.name}</h1> */}
         <div>
@@ -49,7 +49,7 @@ const CandidateLanding = (props) => {
             {/* <a href={`mailto:${this.props.email}`}>{this.props.email}</a> */}
           </p>
         </div>
-      </main>
+      </div>
       <Footer />
     </div>
   );

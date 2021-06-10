@@ -76,7 +76,7 @@ const City = (props) => {
 
   return (
     <div>
-      <main>
+      <div className='main'>
         {hi}
         <form
           className='ui form'
@@ -100,7 +100,7 @@ const City = (props) => {
           <h1>Election Info</h1>
           {/* <p>{this.props.info}</p> */}
         </div>
-      </main>
+      </div>
       <Footer />
     </div>
   );
