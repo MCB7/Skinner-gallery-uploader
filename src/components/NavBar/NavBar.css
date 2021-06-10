@@ -1,5 +1,6 @@
-.navbar {
-  background-color: var(--lightNav);
+.navbar-brand {
+  /* background-color: var(--lightNav); */
+  /* background-color: var(--darkNav);
   height: 10vh;
   display: flex;
   justify-content: flex-start;
@@ -9,7 +10,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 10; */
+  color: blue;
+}
+
+.bg-dark {
+  background-color: #1a52c6;
 }
 
 .navbar button {

@@ -3,10 +3,9 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // css/ sttyling
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../assets/icons/all';
-
+import '../../sass/style.scss';
 // components
 import NavBar from '../NavBar/NavBar';
 import Landing from '../Landing/Landing';

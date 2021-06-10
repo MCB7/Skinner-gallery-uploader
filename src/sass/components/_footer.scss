@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.footer__contents {
+  background-color: $dark-primary;
+  color: $font-primary;
+  font-size: $font-size;
+}

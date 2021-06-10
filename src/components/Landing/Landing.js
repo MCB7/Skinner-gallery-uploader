@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from 'react-bootstrap/Navbar'
 import '../../assets/icons/all';
 import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
 
 import { Link } from 'react-router-dom';
 //link tags do not cause the page to refresh butt the dom to rerender.

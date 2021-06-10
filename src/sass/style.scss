@@ -1,0 +1,12 @@
+@use 'abstracts/colors';
+@use 'abstracts/fonts';
+
+body {
+  background-color: colors.$dark-secondary;
+  color: colors.$font-primary;
+  font-size: fonts.$font-size;
+}
+
+a {
+  color: colors.$light-blue;
+}
