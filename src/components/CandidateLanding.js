@@ -7,8 +7,8 @@ import React from 'react';
 // import Twitter from '../Icons/twitter'
 // import Nav from 'react-bootstrap/Nav'
 // import Footer from './Footer'
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 const CandidateLanding = (props) => {
   // idk if we're doing href tags or something else for NavBar links,

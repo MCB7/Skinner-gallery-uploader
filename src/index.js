@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import './index.css';
 
 import reducers from './redux/reducers';
-import App from './components/App/App';
+import App from './components/App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

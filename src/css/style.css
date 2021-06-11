@@ -3,7 +3,44 @@ body {
   color: #f6fefe;
   font-size: 1.25rem;
 }
-
-a {
+body a {
   color: #c3f8f8;
+}
+
+.footer__contents {
+  background-color: #1f2f35;
+  color: #f6fefe;
+  font-size: 1.25rem;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+.footer__contents .footer__icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+.footer__contents .footer > svg {
+  height: 32px;
+  width: 32px;
+  stroke: var(--lightBg);
+  padding: 8px;
+}
+
+.disclaimer__content {
+  background-color: #1f2f35;
+  display: flex;
+}
+.disclaimer__content .disclaimer__text {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  font-size: 10px;
+  max-width: 75%;
+  color: white;
+  padding-bottom: 12px;
 }

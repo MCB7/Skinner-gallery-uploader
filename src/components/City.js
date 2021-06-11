@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Footer from '../Footer/Footer';
+import Footer from './Footer';
 
-import { queringCity } from '../../redux/actions/Cities/index';
+import { queringCity } from '../redux/actions/Cities/index';
 // import { Card } from 'react-bootstrap';
 
-import Elections from '../Elections/Elections';
+import Elections from './Elections';
 
 // import Button from 'react-bootstrap/Button'
 // import Footer from './Footer'

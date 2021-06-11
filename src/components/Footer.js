@@ -1,9 +1,8 @@
 import React from 'react';
-import Facebook from '../../assets/icons/facebook';
-import LinkedIn from '../../assets/icons/linkedin';
-import Twitter from '../../assets/icons/twitter';
-import Mail from '../../assets/icons/mail';
-import './Footer.css';
+import Facebook from '../assets/icons/facebook';
+import LinkedIn from '../assets/icons/linkedin';
+import Twitter from '../assets/icons/twitter';
+import Mail from '../assets/icons/mail';
 
 // see Navigation for explanation of how this is set up.
 const Footer = () => {

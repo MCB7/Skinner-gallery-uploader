@@ -4,13 +4,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 // css/ sttyling
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../assets/icons/all';
-import '../../sass/style.scss';
+import '../assets/icons/all';
+import '../sass/style.scss';
 // components
-import NavBar from '../NavBar/NavBar';
-import Landing from '../Landing/Landing';
-import City from '../City/City';
-import Candidate from '../CandidateLanding/CandidateLanding';
+import NavBar from './NavBar';
+import Landing from './Landing';
+import City from './City';
+import Candidate from './CandidateLanding';
 
 const App = () => {
   // this is going to be how we call state first assign it to a variable and then

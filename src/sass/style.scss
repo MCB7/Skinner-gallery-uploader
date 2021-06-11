@@ -5,8 +5,50 @@ body {
   background-color: colors.$dark-secondary;
   color: colors.$font-primary;
   font-size: fonts.$font-size;
+
+  a {
+    color: colors.$light-blue;
+  }
 }
 
-a {
-  color: colors.$light-blue;
+.footer__contents {
+  background-color: colors.$dark-primary;
+  color: colors.$font-primary;
+  font-size: fonts.$font-size;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+
+  .footer__icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .footer > svg {
+    height: 32px;
+    width: 32px;
+    stroke: var(--lightBg);
+    padding: 8px;
+  }
+}
+
+.disclaimer__content {
+  background-color: colors.$dark-primary;
+  // background-color: colors.$light-blue;
+  display: flex;
+
+  .disclaimer__text {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 10px;
+    max-width: 75%;
+    color: white;
+    padding-bottom: 12px;
+  }
 }

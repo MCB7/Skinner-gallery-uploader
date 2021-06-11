@@ -15,7 +15,7 @@ const Navigation = () => {
     <div>
       <div className='row'>
         <div className='col-md-12'>
-          <Navbar style={{ backgroundColor: '#2b4148' }} expand='lg'>
+          <Navbar style={{ backgroundColor: '#1f2f35' }} expand='lg'>
             <Link to='/'>
               <Navbar.Brand style={{ color: 'white' }}>
                 Purple Choice
