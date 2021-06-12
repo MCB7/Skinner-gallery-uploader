@@ -154,6 +154,7 @@ ul {
 }
 .menu-bars {
   font-size: 1.6rem;
+
   svg {
     color: white;
     margin-left: 8px;
@@ -165,7 +166,7 @@ ul {
   height: 100vh;
   width: 35vh;
   z-index: 20;
-  background-color: colors.$dark-primary;
+  background-color: colors.$sidebar-primary;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -176,32 +177,41 @@ ul {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0 8px 16px;
+    padding: 0;
     list-style: none;
     height: 60px;
+
+    a:hover {
+      background-color: colors.$font-primary;
+      width: 100%;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
   }
 
   a {
     text-decoration: none;
-    color: colors.$font-primary;
+    color: colors.$sidebar-font-primary;
     width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
     padding: 0 16px;
-    border-radius: 4px;
   }
   a:hover {
-    color: black;
-    background-color: colors.$font-primary;
+    background-color: colors.$sidebar-primary;
   }
   .navbar-toggle {
-    background-color: colors.$dark-primary;
+    background-color: colors.$sidebar-primary;
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    padding-left: 200px;
     align-items: center;
+    svg {
+      color: colors.$sidebar-font-primary;
+    }
   }
   .nav-menu-items {
     width: 100%;
@@ -210,10 +220,16 @@ ul {
   span {
     margin-left: 16px;
   }
+  h1 {
+    background-color: colors.$sidebar-primary;
+    color: colors.$sidebar-font-primary;
+    font-size: fonts.$landing__font-size;
+    padding-left: 20px;
+  }
 }
 
 .active {
-  background-color: colors.$dark-primary;
+  background-color: colors.$sidebar-secondary;
   left: 0;
   transition: 450ms;
 }
