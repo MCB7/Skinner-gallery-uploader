@@ -1,6 +1,9 @@
 // import React, { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
+import { SidebarData } from './SidebarData';
 
 //this is the Bav bar and will not need to be loaded anywhere except in app.js
 // because it sits above the Link tags inside the browserRouter tag it will render on top
@@ -9,32 +12,39 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   // const [open, setOpen] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
+  const showSidebar = () => setSidebar(!sidebar, console.log(sidebar));
   return (
-    <div className='pos-f-t'>
-      <div className='collapse' id='navbarToggleExternalContent'>
-        <div className='bg-dark p-4'>
-          <h4 className='text-white'>Collapsed content</h4>
-          <span className='text-muted'>Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <nav className='navbar navbar-dark '>
-        <button
-          className='navbar-toggler'
-          type='button'
-          data-toggle='collapse'
-          data-target='#navbarToggleExternalContent'
-          aria-controls='navbarToggleExternalContent'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-        >
-          <span className='navbar-toggler-icon'></span>
-        </button>
-        <Link to='/'>
-          <h1 className='brand__name'>Purple Choice</h1>
+    <>
+      <div className='navbar'>
+        <Link to='#' className='menu-bars'>
+          <FaBars onClick={showSidebar} />
         </Link>
+        <Link to='/'>
+          <div className='brand__name'>Purple Choice</div>
+        </Link>
+      </div>
+      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <ul className='nav-menu-items' onClick={showSidebar}>
+          <h1>Cities</h1>
+          <li className='navbar-toggle'>
+            <Link to='#' className='menu-bars'>
+              <AiOutlineClose />
+            </Link>
+          </li>
+          {SidebarData.map((item, index) => {
+            return (
+              <li key={index} className={item.cName}>
+                <Link to={item.path}>
+                  <span>{item.title}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
-    </div>
+    </>
   );
 };
 export default Navigation;

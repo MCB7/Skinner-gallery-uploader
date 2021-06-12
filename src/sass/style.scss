@@ -3,12 +3,12 @@
 
 * {
   font-family: fonts.$font-stack;
-}
-
-body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   background-color: colors.$dark-secondary;
   color: colors.$font-primary;
   font-size: fonts.$font-size;
@@ -56,6 +56,7 @@ ul {
   display: flex;
   justify-content: center;
   margin: auto;
+  margin-top: 82px;
   flex-direction: column;
 }
 
@@ -128,7 +129,7 @@ ul {
     font-weight: fonts.$font-weight;
     color: colors.$font-primary;
     display: flex;
-    padding-left: 45px;
+    padding-left: 65px;
   }
 }
 
@@ -138,8 +139,81 @@ ul {
     font-size: fonts.$landing__font-size;
     font-weight: fonts.$landing__font-weight;
     line-height: fonts.$landing__line-height;
+    padding: 25px;
   }
   p {
     color: colors.$font-primary;
+    font-size: fonts.$landingp__font-size;
+    font-weight: fonts.$landingp__font-weight;
+    line-height: fonts.$landingp__line-height;
+    letter-spacing: 2px;
+
+    padding: 30px;
+    padding-top: 0;
   }
+}
+.menu-bars {
+  font-size: 1.6rem;
+  svg {
+    color: white;
+    margin-left: 8px;
+  }
+}
+
+.nav-menu {
+  margin-top: 80px;
+  height: 100vh;
+  width: 35vh;
+  z-index: 20;
+  background-color: colors.$dark-primary;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 450ms;
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+
+  a {
+    text-decoration: none;
+    color: colors.$font-primary;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+  a:hover {
+    color: black;
+    background-color: colors.$font-primary;
+  }
+  .navbar-toggle {
+    background-color: colors.$dark-primary;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav-menu-items {
+    width: 100%;
+  }
+
+  span {
+    margin-left: 16px;
+  }
+}
+
+.active {
+  background-color: colors.$dark-primary;
+  left: 0;
+  transition: 450ms;
 }

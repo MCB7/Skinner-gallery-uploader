@@ -26,7 +26,6 @@ function Landing() {
         <p>
           <Link to={'/city'}>city</Link>
         </p>
-        Content Here For Trial
       </div>
       <Footer />
     </div>
