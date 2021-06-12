@@ -4,7 +4,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 // css/ sttyling
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/icons/all';
 import '../sass/style.scss';
 // components
 import NavBar from './NavBar';

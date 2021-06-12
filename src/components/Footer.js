@@ -1,8 +1,5 @@
 import React from 'react';
-import Facebook from '../assets/icons/facebook';
-import LinkedIn from '../assets/icons/linkedin';
-import Twitter from '../assets/icons/twitter';
-import Mail from '../assets/icons/mail';
+import Icons from './Icons';
 
 // see Navigation for explanation of how this is set up.
 const Footer = () => {
@@ -10,10 +7,7 @@ const Footer = () => {
     <>
       <footer className='footer__contents'>
         <div className='footer__icons'>
-          <Facebook />
-          <LinkedIn />
-          <Mail />
-          <Twitter />
+          <Icons />
         </div>
       </footer>
       <div className='disclaimer__content'>

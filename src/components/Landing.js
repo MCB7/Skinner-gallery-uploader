@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Navbar from 'react-bootstrap/Navbar'
-import '../assets/icons/all';
 import Footer from './Footer';
 // import Header from '../Header/Header';
 
