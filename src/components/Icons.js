@@ -1,12 +1,10 @@
-import * as FiIcons from 'react-icons/fi';
-
-const all = (props) => (
-  // im assuming this is to hold all 4 icons? feel free to delete if im wrong
+import { FiFacebook, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+const all = () => (
   <div>
-    <FiIcons.FiFacebook />
-    <FiIcons.FiLinkedin />
-    <FiIcons.FiTwitter />
-    <FiIcons.FiMail />
+    <FiFacebook />
+    <FiLinkedin />
+    <FiTwitter />
+    <FiMail />
   </div>
 );
 

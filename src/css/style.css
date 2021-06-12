@@ -28,19 +28,22 @@ body a {
   flex-direction: row;
   margin: auto;
 }
+.footer__contents svg {
+  stroke: #19e0ff;
+}
 
 .disclaimer__content {
   background-color: #1f2f35;
   display: flex;
 }
 .disclaimer__content .disclaimer__text {
+  color: #c3f8f8;
   display: flex;
   justify-content: center;
   margin: auto;
   text-align: center;
   font-size: 10px;
   max-width: 75%;
-  color: white;
   padding-bottom: 12px;
 }
 

@@ -31,20 +31,23 @@ body {
     flex-direction: row;
     margin: auto;
   }
+
+  svg {
+    stroke: colors.$link-primary;
+  }
 }
 
 .disclaimer__content {
   background-color: colors.$dark-primary;
-  // background-color: colors.$dark-secondary;
   display: flex;
   .disclaimer__text {
+    color: colors.$font-secondary;
     display: flex;
     justify-content: center;
     margin: auto;
     text-align: center;
     font-size: 10px;
     max-width: 75%;
-    color: white;
     padding-bottom: 12px;
   }
 }
