@@ -1,7 +1,6 @@
 import React from 'react';
 import Icons from './Icons';
 
-// see Navigation for explanation of how this is set up.
 const Footer = () => {
   return (
     <>

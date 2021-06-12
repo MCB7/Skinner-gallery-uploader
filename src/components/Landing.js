@@ -1,20 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Navbar from 'react-bootstrap/Navbar'
 import Footer from './Footer';
-// import Header from '../Header/Header';
+import choice from '../assets/images/choice.png';
 
 import { Link } from 'react-router-dom';
-//link tags do not cause the page to refresh butt the dom to rerender.
 
 function Landing() {
   return (
     <div className='mainSite'>
       <div className='main'>
-        {/* eventually tthe city and candidate variables will be passed in 
-        however for now we'll use statics until it looks correct */}
+        <img src={choice} alt='choice' />
+        <div className='landing__bio'>
+          <h1>Local Elections Matter</h1>
+          <p>
+            Local Elections affect our daily lives but fewer than 15% of
+            eligible citizens are turning out to vote for our community leaders.
+          </p>
+          <p>
+            Purple Choice is here to help you! We provide all of the information
+            you need to know about your local election candidates.
+          </p>
+        </div>
         <p>
           <Link to={'/candidate'}>Candidates</Link>
-          {/* link tags are very similar to anchor */}
         </p>
         <p>
           <Link to={'/city'}>city</Link>

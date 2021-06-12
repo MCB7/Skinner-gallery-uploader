@@ -6,12 +6,57 @@
 }
 
 body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   background-color: colors.$dark-secondary;
   color: colors.$font-primary;
   font-size: fonts.$font-size;
   a {
     color: colors.$dark-primary;
   }
+}
+
+button,
+a:hover {
+  cursor: pointer;
+}
+a:link {
+  text-decoration: none;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+img,
+label,
+li,
+nav,
+p,
+small,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
 }
 
 //Footer Component
@@ -34,6 +79,9 @@ body {
 
   svg {
     stroke: colors.$link-primary;
+    height: 32px;
+    width: 32px;
+    padding: 6px;
   }
 }
 
@@ -81,5 +129,17 @@ body {
     color: colors.$font-primary;
     display: flex;
     padding-left: 45px;
+  }
+}
+
+.landing__bio {
+  h1 {
+    color: colors.$font-secondary;
+    font-size: fonts.$landing__font-size;
+    font-weight: fonts.$landing__font-weight;
+    line-height: fonts.$landing__line-height;
+  }
+  p {
+    color: colors.$font-primary;
   }
 }
