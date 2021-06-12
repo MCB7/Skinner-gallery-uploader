@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background-color: #2b4148;
   color: #f6fefe;
   font-size: 1.25rem;
 }
 body a {
-  color: #c3f8f8;
+  color: #1f2f35;
 }
 
 .footer__contents {
@@ -23,12 +28,6 @@ body a {
   flex-direction: row;
   margin: auto;
 }
-.footer__contents .footer > svg {
-  height: 32px;
-  width: 32px;
-  stroke: var(--lightBg);
-  padding: 8px;
-}
 
 .disclaimer__content {
   background-color: #1f2f35;
@@ -43,4 +42,32 @@ body a {
   max-width: 75%;
   color: white;
   padding-bottom: 12px;
+}
+
+.navbar {
+  background-color: #1f2f35;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.navbar button {
+  border: none;
+  outline: none;
+}
+.navbar button.navbar-toggler:focus {
+  outline: 1px none !important;
+  box-shadow: none !important;
+}
+.navbar .brand__name {
+  font-weight: 400;
+  color: #f6fefe;
+  display: flex;
+  padding-left: 45px;
 }

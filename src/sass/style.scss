@@ -1,16 +1,20 @@
 @use 'abstracts/colors';
 @use 'abstracts/fonts';
 
+* {
+  font-family: fonts.$font-stack;
+}
+
 body {
   background-color: colors.$dark-secondary;
   color: colors.$font-primary;
   font-size: fonts.$font-size;
-
   a {
-    color: colors.$light-blue;
+    color: colors.$dark-primary;
   }
 }
 
+//Footer Component
 .footer__contents {
   background-color: colors.$dark-primary;
   color: colors.$font-primary;
@@ -27,20 +31,12 @@ body {
     flex-direction: row;
     margin: auto;
   }
-
-  .footer > svg {
-    height: 32px;
-    width: 32px;
-    stroke: var(--lightBg);
-    padding: 8px;
-  }
 }
 
 .disclaimer__content {
   background-color: colors.$dark-primary;
-  // background-color: colors.$light-blue;
+  // background-color: colors.$dark-secondary;
   display: flex;
-
   .disclaimer__text {
     display: flex;
     justify-content: center;
@@ -50,5 +46,37 @@ body {
     max-width: 75%;
     color: white;
     padding-bottom: 12px;
+  }
+}
+
+// NavBar Component
+.navbar {
+  background-color: colors.$dark-primary;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  button {
+    border: none;
+    outline: none;
+  }
+
+  button.navbar-toggler:focus {
+    outline: 1px none !important;
+    box-shadow: none !important;
+  }
+
+  .brand__name {
+    font-weight: fonts.$font-weight;
+    color: colors.$font-primary;
+    display: flex;
+    padding-left: 45px;
   }
 }

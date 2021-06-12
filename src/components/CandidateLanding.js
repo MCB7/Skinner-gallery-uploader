@@ -7,8 +7,7 @@ import React from 'react';
 // import Twitter from '../Icons/twitter'
 // import Nav from 'react-bootstrap/Nav'
 // import Footer from './Footer'
-import Header from './Header';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 const CandidateLanding = (props) => {
   // idk if we're doing href tags or something else for NavBar links,
@@ -17,7 +16,6 @@ const CandidateLanding = (props) => {
   // i assume we're pulling bio, policies, etc. from a DB or .txt file, so we can put a variable as a prop
   return (
     <div>
-      <Header />
       <div className='main'>
         {/* <Image src={this.props.profileImagePath} roundedCircle /> */}
         {/* <h1>{this.props.name}</h1> */}
