@@ -2,30 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Footer from './Footer';
 
-import {queryForCandidiates} from '../redux/actions/Candidates';
-
+import { queryForCandidiates } from '../redux/actions/Candidates';
 
 import Elections from './Elections';
 
-
-const City = ({SelectedCity, UpdateSelectedCity}) => {
-  
-  const [cityInputString, setCityInputString] = useState("enter city here");
+const City = ({ SelectedCity, UpdateSelectedCity }) => {
+  const [cityInputString, setCityInputString] = useState('enter city here');
   const dispatch = useDispatch();
-  const candidiatesAll = useSelector(state => state.candidate)
-  console.log(SelectedCity,'herererere')
-  console.log(candidiatesAll,'again lets try tthis')
-
+  const candidiatesAll = useSelector((state) => state.candidate);
+  console.log(SelectedCity, 'herererere');
+  console.log(candidiatesAll, 'again lets try tthis');
 
   useEffect(() => {
     //for now this will stop query for cities we dont have in the db
-    if(SelectedCity !== 'Seattle'){
-      return
-    }else
-    //  dispatch(queryForElections(SelectedCity))
-    dispatch(queryForCandidiates(SelectedCity))
-  }, [])
- 
+    if (SelectedCity !== 'Seattle') {
+      return;
+    } else dispatch(queryForCandidiates(SelectedCity));
+  }, []);
+
   // this will be used to render all of the elections of a given area pushing them into an array
   //and displaying the election name as an array
 
@@ -41,13 +35,8 @@ const City = ({SelectedCity, UpdateSelectedCity}) => {
 
   return (
     <div className='mainsite'>
-      <div className='main'>
-      {renderTheElectionsArr}
-      </div>
-      
-    hi there
-   
-  
+      <div className='main'>{renderTheElectionsArr}</div>
+      hi there
       <Footer />
     </div>
   );

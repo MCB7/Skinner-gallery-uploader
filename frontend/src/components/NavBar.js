@@ -4,25 +4,23 @@ import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 
-
 //this is the Bav bar and will not need to be loaded anywhere except in app.js
 // because it sits above the Link tags inside the browserRouter tag it will render on top
 //just the same as if you stacked it locally inside any component. the same if true for
 //tthe footer at the bottom of app.js under the Link tags.
 
-const Navigation = ({UpdateSelectedCity}) => {
+const Navigation = ({ UpdateSelectedCity }) => {
   // const [open, setOpen] = useState(false);
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar, console.log(sidebar));
-  console.log(UpdateSelectedCity,'inside nav')
+  console.log(UpdateSelectedCity, 'inside nav');
 
   const UpdateSelectedCityagain = (cityname) => {
-    console.log(cityname)
-    UpdateSelectedCity(cityname)
-  }
+    console.log(cityname);
+    UpdateSelectedCity(cityname);
+  };
 
-  
   return (
     <>
       <div className='navbar'>
@@ -45,9 +43,12 @@ const Navigation = ({UpdateSelectedCity}) => {
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className={item.cName}>
-                <Link  
-                  onClick= { ()=>{ UpdateSelectedCityagain( item.path.replace( '/','' ) ) } }    
-                  to={item.path}>
+                <Link
+                  onClick={() => {
+                    UpdateSelectedCityagain(item.path.replace('/', ''));
+                  }}
+                  to={item.path}
+                >
                   <span>{item.title}</span>
                 </Link>
               </li>

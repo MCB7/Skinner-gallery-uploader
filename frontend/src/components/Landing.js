@@ -2,14 +2,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Footer';
 import choice from '../assets/images/choice.png';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-function Landing({UpdateSelectedCity}) {
+function Landing({ UpdateSelectedCity }) {
   //when clicking on the city this sets the city variable in the app
   const UpdateSelectedCityagain = (cityname) => {
-    console.log(cityname)
-    UpdateSelectedCity(cityname)
-  }
+    console.log(cityname);
+    UpdateSelectedCity(cityname);
+  };
 
   return (
     <div className='mainSite'>
@@ -26,15 +26,6 @@ function Landing({UpdateSelectedCity}) {
             you need to know about your local election candidates.
           </p>
         </div>
-        {/* <p> */}
-          {/* <Link to={'/candidate'}>Candidates</Link>
-        </p>
-        <p>
-        <Link 
-            onClick=
-            {()=>{UpdateSelectedCityagain('Seattle')}}          
-            to={"/Seattle"}>seattle</Link>
-        </p> */}
       </div>
       <Footer />
     </div>
