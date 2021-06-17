@@ -6,7 +6,7 @@ const candidateReducer =(state=[], action)=>{
     switch(action.type){
       
       case QUERY_FOR_CANDIDATETS:
-      return [...state,action.payload]
+      return action.payload
       
         default: return state        
     }

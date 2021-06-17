@@ -1,8 +1,8 @@
-
+const mongoose = require("mongoose");
 
 const electionSchema = {
-  electionName: String,
-  State: Array,
+  type: String,
+  States: Array,
 }
  
 const Election = mongoose.model("Election", electionSchema);

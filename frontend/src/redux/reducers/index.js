@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 
 import CandidateReducer from './CandidateReducer';
-import CityReducer from './CityReducer';
+import ElectionRReducer from './ElectionReducer';
 
 export default combineReducers({
 candidate:CandidateReducer,
-city : CityReducer
+elections : ElectionRReducer
 })

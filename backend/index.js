@@ -3,6 +3,7 @@ require('./models/Candidates');
 
 const mongoose = require("mongoose");
 const candidateRoutes = require('./routes/candidateRoute')
+const electionroutes = require('./routes/electionRoutes')
 
 
 
@@ -19,6 +20,7 @@ mongoose.connect("mongodb+srv://admin:serum@cluster0.9v0ik.mongodb.net/seamayor"
 
 // app.use("/", require("./routes/candidateRoute"));
 candidateRoutes(app)
+electionroutes(app)
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, function() {

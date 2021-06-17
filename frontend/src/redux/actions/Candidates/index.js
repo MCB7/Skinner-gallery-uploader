@@ -21,6 +21,6 @@ export const queryForCandidiates= (slectedCity)=>{
       
 
       dispatch({type:QUERY_FOR_CANDIDATETS,
-        payload:res })
+        payload:res.data })
     } 
 }
