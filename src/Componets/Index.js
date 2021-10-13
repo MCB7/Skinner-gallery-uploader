@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
 
 //dispatches the action you exported from actions index
-import {useDispatch} from 'react-redux'
+import {useDispatch,useSelector} from 'react-redux'
 
 import {firstAction} from '../Actions/index';
 
@@ -39,7 +39,10 @@ grid-auto-rows: 500px;
 
 
 export default function Index() {
-
+//lastly we have use selector which is where we can query anywhere for the state by just assigning 
+//a variable and looking for state where state is the reducer we want to pull from
+const phrase = useSelector(state => state.api)
+console.log('this is the state', phrase)
   //we assign dispatch to a new variable
   const dispatch = useDispatch()
 
