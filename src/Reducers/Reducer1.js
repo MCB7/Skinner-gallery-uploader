@@ -6,10 +6,14 @@
 import { HOLD_ON } from "../Actions/types"
 
  const reducer1 = (state=['hey'],action) => {
-  
+  console.log('the action type is :',action.type)
   switch(action.type){
+   
+    
     case HOLD_ON:
+      console.log("in the reducer the state will be :", action.payload)
       return[state, action.payload]
+    
 
       default:
         return state
