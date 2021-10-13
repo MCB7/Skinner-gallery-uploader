@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-uploadgallery-dev-103524-authRole",
-      "UnauthRoleArn": "arn:aws:iam::844734521856:role/amplify-uploadgallery-dev-103524-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::844734521856:role/amplify-uploadgallery-dev-103524-authRole",
+      "AuthRoleName": "amplify-alexisskinnerhair-dev-112929-authRole",
+      "UnauthRoleArn": "arn:aws:iam::506264644944:role/amplify-alexisskinnerhair-dev-112929-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::506264644944:role/amplify-alexisskinnerhair-dev-112929-authRole",
       "Region": "us-west-2",
-      "DeploymentBucketName": "amplify-uploadgallery-dev-103524-deployment",
-      "UnauthRoleName": "amplify-uploadgallery-dev-103524-unauthRole",
-      "StackName": "amplify-uploadgallery-dev-103524",
-      "StackId": "arn:aws:cloudformation:us-west-2:844734521856:stack/amplify-uploadgallery-dev-103524/782ae650-29f0-11ec-a42a-06a4825cea6f",
-      "AmplifyAppId": "d30cmrff92mhlk"
+      "DeploymentBucketName": "amplify-alexisskinnerhair-dev-112929-deployment",
+      "UnauthRoleName": "amplify-alexisskinnerhair-dev-112929-unauthRole",
+      "StackName": "amplify-alexisskinnerhair-dev-112929",
+      "StackId": "arn:aws:cloudformation:us-west-2:506264644944:stack/amplify-alexisskinnerhair-dev-112929/825b6c20-2c53-11ec-b16a-02fb42d5cf4b",
+      "AmplifyAppId": "d1eabw2dmvnxqa"
     },
     "categories": {
       "auth": {
-        "uploadgalleryc96f7707": {}
+        "alexisskinnerhair08a0aa79": {}
       }
     }
   }

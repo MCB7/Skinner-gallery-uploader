@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "uploadgalleryc96f7707_identitypool_c96f7707",
+    "identityPoolName": "alexisskinnerhair08a0aa79_identitypool_08a0aa79",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "uploadc96f7707",
-    "userPoolName": "uploadgalleryc96f7707_userpool_c96f7707",
+    "resourceNameTruncated": "alexis08a0aa79",
+    "userPoolName": "alexisskinnerhair08a0aa79_userpool_08a0aa79",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -29,10 +29,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "uploadc96f7707_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "alexis08a0aa79_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "c96f7707",
-    "resourceName": "uploadgalleryc96f7707",
+    "sharedId": "08a0aa79",
+    "resourceName": "alexisskinnerhair08a0aa79",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

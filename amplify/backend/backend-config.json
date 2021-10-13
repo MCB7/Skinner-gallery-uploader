@@ -1,6 +1,6 @@
 {
   "auth": {
-    "uploadgalleryc96f7707": {
+    "alexisskinnerhair08a0aa79": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -27,7 +27,7 @@
     }
   },
   "storage": {
-    "uploadgallerys3": {
+    "AlexisSkinners": {
       "service": "S3",
       "providerPlugin": "awscloudformation"
     }
