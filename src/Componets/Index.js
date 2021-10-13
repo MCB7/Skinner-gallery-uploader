@@ -3,7 +3,10 @@ import { Storage } from 'aws-amplify'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
 
+//dispatches the action you exported from actions index
+import {useDispatch} from 'react-redux'
 
+import {firstAction} from '../Actions/index';
 
 // style
 const GlobalStyle = createGlobalStyle`
@@ -36,8 +39,14 @@ grid-auto-rows: 500px;
 
 
 export default function Index() {
+
+  //we assign dispatch to a new variable
+  const dispatch = useDispatch()
+
   const [images, setImages] = useState([])
   useEffect(() => {
+    // we dispatch the action here just for the first time
+    dispatch(firstAction('hi there morgan im the first action'));
     fetchImages()
   }, [])
   async function fetchImages() {
