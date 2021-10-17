@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll; /* Add the ability to scroll */
-  
+  height: 100vh;
 
 
 }
@@ -30,34 +30,48 @@ html {
 }
 
 .cursor {
-  width: 20px;
-  height: 20px;
-  border: 20px solid rgb(0, 195, 255);
+  
+  width: 40px;
+  height: 40px;
+  border: 20px solid rgb(2, 189, 252);
   border-radius: 50%;
   position: absolute;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
-  animation: cursorAnim .6s infinite alternate;
+  animation: cursorAnim 1s infinite alternate;
   pointer-events: none;
   z-index: 5;
 }
 
+.cursor::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: .01;
+  top: -10px;
+  left: -10px;
+  animation: cursorAnim2 .9s infinite alternate;
+  z-index: 5;
+}
 
 @keyframes cursorAnim {
   from {
       transform: scale(1);
   }
   to {
-      transform: scale(.5);
+      transform: scale(.7);
   }
 }
 
 @keyframes cursorAnim2 {
   from {
-      transform: scale(.5);
+      transform: scale(1);
   }
   to {
-      transform: scale(1);
+      transform: scale(.4);
   }
 }
 
@@ -73,6 +87,7 @@ html {
       opacity: 0;
   }
 }
+
 
 .expand {
   animation: cursorAnim3 .5s forwards;
@@ -316,3 +331,84 @@ background-color: transparent;
 }
 
 
+/* <><><> MEDIA QUERIES<><><> */
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  .cursor {
+    display: none
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  .cursor {
+    display: none
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  .cursor {
+    display: none
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+
+  .cursor {
+    display: none
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .cursor {
+    display: none
+  }
+  
+  /* CSS */
+  
+}
