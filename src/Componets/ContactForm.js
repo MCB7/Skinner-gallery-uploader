@@ -2,6 +2,7 @@ import emailjs from "emailjs-com";
 import React from 'react';
 import  MessageOverlayOff from './OverlayM';
 import  OfffadeM from './Mfade';
+import MessageOverlayOn from './OverlayM-on';
 
 export default function ContactUs() {
 
@@ -28,9 +29,8 @@ export default function ContactUs() {
         <div>
             
             <div id = {"overlayM"} onClick={MessageOverlayOff} style={{cursor: "none"}}  onMouseUp={OfffadeM}>
-           
-         
-            <form onSubmit={sendEmail} >
+           <div id={"form"}>
+            <form onSubmit={sendEmail} onClick={MessageOverlayOn} >
                     <div className="row pt-5 mx-auto" >
                         <div className="col-8 form-group mx-auto">
                             <input type="text" className="form-control" placeholder="Name" name="name"/>
@@ -54,7 +54,8 @@ export default function ContactUs() {
                 </form>
             </div>
         </div>
-        
+        </div>
+         
         
     )
 }
