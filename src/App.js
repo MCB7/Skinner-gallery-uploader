@@ -5,6 +5,8 @@ import { createGlobalStyle } from 'styled-components';
 
 import Index from './Componets/Index';
 import AboutMe from './Componets/Aboutme'
+import ContactUs from './Componets/ContactForm';
+
 
 
 

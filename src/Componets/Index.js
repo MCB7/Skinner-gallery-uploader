@@ -73,7 +73,7 @@ console.log('this is the state', phrase)
     <div className="App">
       <GlobalStyle />
      <WrapperImage>
-    
+    {/* GALLERY IMAGES */}
         {
           images.map(image => (
             <img
