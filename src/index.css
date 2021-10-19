@@ -29,10 +29,7 @@ html {
   z-index: 1;
 }
 
-
-
 .cursor {
-  
   width: 40px;
   height: 40px;
   border: 20px solid rgb(2, 189, 252);
@@ -42,10 +39,22 @@ html {
   transition-timing-function: ease-out;
   animation: cursorAnim 1s infinite alternate;
   pointer-events: none;
-  z-index: 5;
+  z-index: 7;
 }
 
-
+.cursor::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: .01;
+  top: -10px;
+  left: -10px;
+  animation: cursorAnim2 .9s infinite alternate;
+  z-index: 5;
+}
 
 @keyframes cursorAnim {
   from {
@@ -131,12 +140,6 @@ transition: 0.5s;
  
   }
 
-#form {
-
-
-  z-index: 2;
-}
-
 
 
 #overlayC {
@@ -200,12 +203,6 @@ transition: 0.5s;
   height: 0;
   overflow: hidden;
   transition-timing-function: linear, step-end;
-  
-}
-
-.form {
-  
-  
 }
 
 
