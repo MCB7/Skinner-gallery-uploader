@@ -2,6 +2,7 @@ import emailjs from "emailjs-com";
 import React from 'react';
 import  MessageOverlayOff from './OverlayM';
 import  OfffadeM from './Mfade';
+import MessageOverlayOn from './OverlayM-on';
 
 export default function ContactUs() {
 
@@ -14,22 +15,22 @@ export default function ContactUs() {
         }, (error) => {
             console.log(error.text);
         });
-        e.target.reset()       
+        e.target.reset()
+
+        
     }
 
-   
+ 
 
-  
+    
 
-   
     return(
         
         <div>
             
-            <div id = {"overlayM"} onClick={(e)=>MessageOverlayOff(e)} style={{cursor: "none"}}  onMouseUp={OfffadeM}>
-           
-         
-            <form onSubmit={sendEmail} >
+            <div id = {"overlayM"} onClick={MessageOverlayOff} style={{cursor: "none"}}  onMouseUp={OfffadeM}>
+           <div id={"form"}>
+            <form onSubmit={sendEmail} onClick={MessageOverlayOn} >
                     <div className="row pt-5 mx-auto" >
                         <div className="col-8 form-group mx-auto">
                             <input type="text" className="form-control" placeholder="Name" name="name"/>
@@ -41,7 +42,7 @@ export default function ContactUs() {
                             <input type="text" className="form-control" placeholder="Subject" name="subject"/>
                         </div>
                         <div className="col-8 form-group pt-2 mx-auto">
-                            <textarea  className="form-control" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+                            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                         </div>
                         <div className="col-8 pt-3 mx-auto">
                             <input type="submit" className="btn btn-info" value="Send Message"></input>
@@ -53,7 +54,8 @@ export default function ContactUs() {
                 </form>
             </div>
         </div>
-        
+        </div>
+         
         
     )
 }
