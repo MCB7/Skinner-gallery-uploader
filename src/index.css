@@ -216,6 +216,10 @@ transition: 0.5s;
   -ms-transform: translate(-50%,-50%);
 }
 
+.icons {
+  height: 5em;
+  width: 5em;
+}
 
 
 #text1{
@@ -278,6 +282,7 @@ background-color: transparent;
 
 .message:hover {
   background: rgb(138,58,185);
+  border-radius: 50%;
   background: linear-gradient(184deg, rgba(138,58,185,1) 0%,rgb(205, 72,107) 50%, rgba(252,204,99,1) 100%);
   filter: invert(1);
 }

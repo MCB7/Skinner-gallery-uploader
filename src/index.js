@@ -14,6 +14,8 @@ import App from './App';
 import AppGallery from './AppGallery';
 import reportWebVitals from './reportWebVitals';
 import ContactUs from './Componets/ContactForm'
+import Overlay from './Componets/ContactOverlay'
+import InstaMsgOverlay from './Componets/InstaMsgIconOverlay'
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
@@ -26,7 +28,10 @@ ReactDOM.render(
   <React.StrictMode>
     <AppGallery />,
     <App />
+    <Overlay />
+    <InstaMsgOverlay/>
     <ContactUs/>
+
   </React.StrictMode>,
   </Provider>,
   document.getElementById('root')
