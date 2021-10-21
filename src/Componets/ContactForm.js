@@ -9,7 +9,7 @@ export default function ContactUs() {
     function sendEmail(e) {
         e.preventDefault();
 
-    emailjs.sendForm('gmail', 'youtube_template', e.target, 'user_JABO21I8Gm6sxByJH17Nu')
+    emailjs.sendForm('service_hdrytq8', 'template_4t58w5h', e.target, 'user_s91Br6tqZ1rGYwilylk8K')
         .then((result) => {
             console.log(result.text);
         }, (error) => {

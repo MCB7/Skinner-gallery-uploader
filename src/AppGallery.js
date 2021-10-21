@@ -88,6 +88,10 @@ class AppGallery  extends Component {
           loop={false}
           isResponsive={true}
           direction={`forward`}
+          onMouseOver={spritesheet =>{
+            spritesheet.goToAndPlay(1)
+            
+          }}
 
         />
 
