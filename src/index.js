@@ -16,6 +16,7 @@ import reportWebVitals from './reportWebVitals';
 import ContactUs from './Componets/ContactForm'
 import Overlay from './Componets/ContactOverlay'
 import InstaMsgOverlay from './Componets/InstaMsgIconOverlay'
+
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
@@ -31,6 +32,7 @@ ReactDOM.render(
     <Overlay />
     <InstaMsgOverlay/>
     <ContactUs/>
+
 
   </React.StrictMode>,
   </Provider>,

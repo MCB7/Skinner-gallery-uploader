@@ -69,6 +69,21 @@ console.log('this is the state', phrase)
     console.log({ result })
     fetchImages()
   }
+
+
+  async function deleteImages() {
+    const deleted = await Storage.remove('');
+    console.log({ deleted })
+   
+  }
+
+
+  
+
+ 
+           
+
+
   return (
     <div className="App">
       <GlobalStyle />
@@ -90,8 +105,25 @@ console.log('this is the state', phrase)
         type="file"
         onChange={onChange}
       />
-     
+
+<div>
+              {
+          images.map(image => (
+            <img
+              src={image}
+              key={image}
+              style={{width: 500, height: 500}}
+              onClick={deleteImages}
+            />
+          ))
+        }
+        
+      </div>
+      
+        
     </div>
+
+    
   );
 }
 
