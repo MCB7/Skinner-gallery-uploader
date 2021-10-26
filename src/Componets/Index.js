@@ -73,13 +73,19 @@ console.log('this is the state', phrase)
 
 
   async function deleteAnImageconsole(e,image){
+    //split the image att the slashes
     let split = image.split('/')
     console.log('im the split1',split)
+    //assign to new varibale so data is not stale
      let thisistheword = split[4].split('?')
     console.log('im the split',thisistheword)
+    //assign new data again to the index in the array that is the image
     let Deleteme = thisistheword[0];
+    //reaplce all % with spaces DOES NOTHING FOR NOW REALLY
     let newdetele = Deleteme.replace(/%/g,' ')
+    //consolelog the image name
     console.log('im new here',newdetele);
+    //delete that image
     const result = await Storage.remove(newdetele)
     console.log({result})
   }
