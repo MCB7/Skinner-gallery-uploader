@@ -52,6 +52,7 @@ console.log('this is the state', phrase)
     dispatch(firstAction('hi there morgan im the first action'));
     fetchImages()
   }, [])
+
   async function fetchImages() {
     let imageKeys = await Storage.list('')
     imageKeys = await Promise.all(imageKeys.map(async k => {
@@ -69,6 +70,21 @@ console.log('this is the state', phrase)
     console.log({ result })
     fetchImages()
   }
+
+
+  async function deleteAnImageconsole(e,image){
+    let split = image.split('/')
+    console.log('im the split1',split)
+     let thisistheword = split[4].split('?')
+    console.log('im the split',thisistheword)
+    let Deleteme = thisistheword[0];
+    let newdetele = Deleteme.replace(/%/g,' ')
+    console.log('im new here',newdetele);
+    const result = await Storage.remove(newdetele)
+    console.log({result})
+  }
+
+
   return (
     <div className="App">
       <GlobalStyle />
@@ -80,6 +96,21 @@ console.log('this is the state', phrase)
               src={image}
               key={image}
               style={{width: 500, height: 500}}
+             
+              
+            />
+          ))
+        }
+
+{/* DELETING GALLERY */}
+        {
+          images.map(image => (
+            <img
+              src={image}
+              key={image}
+              style={{width: 500, height: 500}}
+              onClick={(e)=>{deleteAnImageconsole(e,image) }}
+              
             />
           ))
         }
