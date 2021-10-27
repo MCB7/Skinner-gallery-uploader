@@ -7,7 +7,7 @@ import sheet2 from './assets/orbbutton.svg'
 
 
 
-class AppGallery  extends Component {
+class AppGallery extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,82 +15,83 @@ class AppGallery  extends Component {
     };
   }
 
-  
+
 
   render() {
     return (
 
-    
+
       <div className="rrs-container">
-       <div id="navbar">
-       <Spritesheet
-          className={`navbar`}
-          image={sheet2}
-          widthFrame={234.5}
-          heightFrame={57}
-          steps={15}
-          fps={10}
-          autoplay={false}
-          loop={true}
-          isResponsive={true}
-          direction={`forward`}
-          
-          
-          
-          onClick={spritesheet => {
-            spritesheet.play();
-         
-           
+        <div id="navbar">
+          <Spritesheet
+            className={`navbar`}
+            image={sheet2}
+            widthFrame={234.5}
+            heightFrame={57}
+            steps={15}
+            fps={10}
+            autoplay={false}
+            loop={true}
+            isResponsive={true}
+            direction={`forward`}
+
+
+
+            onClick={spritesheet => {
+              spritesheet.play();
+
+
             }}
-          onLoopComplete={spritesheet =>{
-            spritesheet.goToAndPause(.001)
-            function on() {
-              document.getElementById("overlay").style.display = "block";
-              document.getElementById("overlay").style.opacity = "1"
-              document.getElementById("overlay").style.visibility = "visible";
-     
+            onLoopComplete={spritesheet => {
+              spritesheet.goToAndPause(.001)
+              function on() {
+                document.getElementById("overlay").style.display = "block";
+                document.getElementById("overlay").style.opacity = "1"
+                document.getElementById("overlay").style.visibility = "visible";
 
-            
-             
-             
-              
-            }
-            on();
-          }}
-            
-         
-          
 
-          style={{ display: 'block',
-          margin:'auto',
-          width: '25%',
 
-          
-          }}
 
-          
 
-        />
-</div>
 
-        
+              }
+              on();
+            }}
+
+
+
+
+            style={{
+              display: 'block',
+              margin: 'auto',
+              width: '25%',
+
+
+            }}
+
+
+
+          />
+        </div>
+
+
 
         <Spritesheet
- 
+
           image={sheet}
-         
+
           widthFrame={1006}
           heightFrame={285}
-      
+
           steps={11}
           fps={11}
           autoplay={true}
           loop={false}
           isResponsive={true}
           direction={`forward`}
-          onMouseOver={spritesheet =>{
+          onMouseOver={spritesheet => {
             spritesheet.goToAndPlay(1)
-            
+
           }}
 
         />
@@ -106,20 +107,21 @@ class AppGallery  extends Component {
           isResponsive={true}
           direction={`forward`}
 
-          onMouseOver={spritesheet =>{
+          onMouseOver={spritesheet => {
             spritesheet.goToAndPlay(1)
-            
+
           }}
-          
+
           timeout={100}
 
-          style={{ display: 'block',
-          margin:'auto',
-          width: '50%',
+          style={{
+            display: 'block',
+            margin: 'auto',
+            width: '50%',
           }}
         />
 
-<Spritesheet
+        <Spritesheet
           className={`buttonpadding`}
           image={sheet2}
           widthFrame={234.5}
@@ -130,53 +132,54 @@ class AppGallery  extends Component {
           loop={true}
           isResponsive={true}
           direction={`forward`}
-          
-          
-          
+
+
+
           onClick={spritesheet => {
             spritesheet.play();
-         
-           
-            }}
-          onLoopComplete={spritesheet =>{
+
+
+          }}
+          onLoopComplete={spritesheet => {
             spritesheet.goToAndPause(.001)
             function on() {
               document.getElementById("overlay").style.display = "block";
               document.getElementById("overlay").style.opacity = "1"
               document.getElementById("overlay").style.visibility = "visible";
-     
 
-            
-             
-             
-              
+
+
+
+
+
             }
             on();
           }}
-            
-         
-          
 
-          style={{ display: 'block',
-          margin:'auto',
-          width: '50%',
 
-          
+
+
+          style={{
+            display: 'block',
+            margin: 'auto',
+            width: '50%',
+
+
           }}
 
-          
+
 
         />
-        
-        </div>
-        
-          
-       
-      
+
+      </div>
+
+
+
+
     );
   }
 }
 
-render(<AppGallery />, document.getElementById('root'));
+
 
 export default AppGallery;

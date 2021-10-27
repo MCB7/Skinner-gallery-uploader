@@ -1,45 +1,14 @@
-import { useState, useEffect } from 'react'
+import React,{useState, useEffect} from 'react';
 import { Storage } from 'aws-amplify'
-import styled from 'styled-components'
-import { createGlobalStyle } from 'styled-components';
 
-//dispatches the action you exported from actions index
-import {useDispatch,useSelector} from 'react-redux'
 
-import {firstAction} from '../Actions/index';
 
-// style
-const GlobalStyle = createGlobalStyle`
- * {
-   
-   box-sizing: border-box;
- }
- img {
-  height: auto;
-  max-width: 100%;
-}
-`;
-const WrapperImage = styled.section`
-max-width: 70rem;
-margin: 10rem auto;
-display: grid;
-grid-gap: 1em;
-grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
-padding-bottom: 200 px;
-grid-auto-rows: 500px;
-`; 
-export default function Index() {
-//lastly we have use selector which is where we can query anywhere for the state by just assigning 
-//a variable and looking for state where state is the reducer we want to pull from
-const phrase = useSelector(state => state.api)
-console.log('this is the state', phrase)
-  //we assign dispatch to a new variable
-  const dispatch = useDispatch()
+export default function Backend(){
+
   const [images, setImages] = useState([])
   useEffect(() => {
     // we dispatch the action here just for the first time
-    dispatch(firstAction('hi there morgan im the first action'));
-    fetchImages()
+  fetchImages()
   }, [])
 
   async function fetchImages() {
@@ -60,6 +29,7 @@ console.log('this is the state', phrase)
     console.log({ result })
     fetchImages()
   }
+
   async function deleteAnImageconsole(e,image){
     //split the image att the slashes
     let split = image.split('/')
@@ -77,37 +47,24 @@ console.log('this is the state', phrase)
     const result = await Storage.remove(newdetele)
     console.log({result})
   }
-  return (
-    <div className="App">
-      <GlobalStyle />
-      <WrapperImage>
-      {/* GALLERY IMAGES */}
-        {
+  return(
+  <div>
+  I'm the back end!
+  {/* DELETING GALLERY */}
+  {
           images.map(image => (
             <img
               src={image}
               key={image}
-              style={{width: 500, height: 500}}             
-            />
-          ))
-        }
-{/* DELETING GALLERY */}
-        {
-          images.map(image => (
-            <img
-              src={image}
-              key={image}
-              style={{width: 500, height: 500}}
               onClick={(e)=>{deleteAnImageconsole(e,image) }}             
             />
           ))
         }  
-      </WrapperImage>
+      
       <input
         type="file"
         onChange={onChange}
-      />    
-    </div>
-  );
+      />
+  </div>
+  )
 }
-

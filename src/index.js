@@ -26,14 +26,9 @@ const store = createStore(reducers)
 //wrap app in the provider tag and pass in the create store.
 ReactDOM.render(
   <Provider store={store} >,
-  <React.StrictMode>
-    <AppGallery />,
-    <App />
+  <React.StrictMode>,
+    <App />,
     <Overlay />
-    <InstaMsgOverlay/>
-    <ContactUs/>
-
-
   </React.StrictMode>,
   </Provider>,
   document.getElementById('root')
