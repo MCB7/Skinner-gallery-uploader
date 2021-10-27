@@ -47,112 +47,17 @@
 
       
 // When the user scrolls down -100px from the top of the document, slide down the navbar
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-100px";
-  }
-}
 
-      function messageOverlayon() {
-              document.getElementById("overlayM").style.display = "block";
-              document.getElementById("overlayM").style.opacity = "1"
-              document.getElementById("overlayM").style.visibility = "visible";
-
-            
-      }
-              
-      
     
-      function messageOverlayOff() {
-        let messageBox = document.getElementById("overlayM");
-        messageBox.classList.toggle('hidden');
-      }
-
-      function offfadeM() {
-        if (box=document.getElementById("overlayM").style.opacity = "0") {
-          document.getElementById("overlayM").style.visibility = "hidden";
-        }
-      }
-
-
-
-
-      function contactOverlayon() {
-              document.getElementById("overlayC").style.display = "block";
-              document.getElementById("overlayC").style.opacity = "1"
-              document.getElementById("overlayC").style.visibility = "visible";
-
-            
-      }  
-      function contactOverlayOff() {
-        let contactBox = document.getElementById("overlayC");
-        contactBox.classList.toggle('hidden');
-      }
-      function offfadeC() {
-        if (box=document.getElementById("overlayC").style.opacity = "0") {
-          document.getElementById("overlayC").style.visibility = "hidden";
-        }
-      }
-      function off() {
-        let box =  document.getElementById("overlay");
-        box.classList.toggle('hidden');
-        }
-        //when closing the overlay, it fades, this does that 
-      function offfade() {
-        if (box=document.getElementById("overlay").style.opacity = "0") {
-          document.getElementById("overlay").style.visibility = "hidden";
-        }
-      }
       //custom cursor 
-      const cursor = document.querySelector('.cursor');
-
-      document.addEventListener('mousemove', e => {
-      cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-      })
-
-      document.addEventListener('click', () => {
-      cursor.classList.add("expand");
-
-      setTimeout(() => {
-          cursor.classList.remove("expand");
-      }, 500)
-      }) 
+   
       </script>
    
- <section class="showcase">
-<video src="videobg8.mp4" muted loop autoplay></video>
-</section>
-<!-- <><><>BELOW Contact 'base initial overlay layer'<><><> -->
-<div id="overlay" OnClick="offfade()" style="cursor: none;" OnMouseUp="offfade()">
-  <div id="text0" OnClick="contactOverlayon()" style="cursor: none;" class="allsides-6"> Contact</div>
- <!-- <><><>ABOVE Contact<><><> -->
- 
-  
- 
-<!-- <><><>BELOW ENTER LOGIN SCREEN BUTTON<><><> -->
-<img src="scissors.svg">
-</div>
-<!-- <><><>ABOVE ENTER LOGIN SCREEN BUTTON<><><> -->
 
 
-<!-- <><><>BELOW 2nd overlay layer INSTAGRAM EMAIL BUTTON<><><> -->
-<div id = "overlayC"  OnClick="contactOverlayOff()" style="cursor: none;" OnMouseUp="offfadeC()">
-  <div id="text1" OnClick="contactOverlayOff()" style="cursor: none;" class="allsides-6"><img src="instaicon.svg" width="200" height="200"></div>
-  <div id="text2" OnClick="messageOverlayon()" OnMouseUp="offfadeC()" style="cursor: none;"><div class ="message"><img src="contacticon.svg"  width="200" height="200"></div></div>
-  </div>
-  <!-- <><><>ABOVE 2nd overlay layer INSTAGRAM EMAIL BUTTON<><><> -->
-  
-  <!-- <><><>BELOW 3rd overlay layer FORM for EMAIL<><><> -->
-  <div id = "overlayM"  OnClick="messageOverlayOff()" style="cursor: none;" OnMouseUp="offfadeM()">
-  <div id ="text0">MESSAGE FORM HERE</div>
-  </div>
-  <!-- <><><>ABOVE 3rd overlay layer FORM for EMAIL<><><> -->
 <!--CUSTOM CURSOR BELOW-->
-    <canvas id="canvas"></canvas>
+    
     
 
 

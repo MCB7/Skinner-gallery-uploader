@@ -7,6 +7,7 @@ import sheet2 from './assets/orbbutton.svg'
 
 
 
+
 class AppGallery extends Component {
   constructor() {
     super();
@@ -20,7 +21,7 @@ class AppGallery extends Component {
   render() {
     return (
 
-
+      
       <div className="rrs-container">
         <div id="navbar">
           <Spritesheet
@@ -170,11 +171,11 @@ class AppGallery extends Component {
 
 
         />
-
+      
       </div>
+      
 
-
-
+            
 
     );
   }

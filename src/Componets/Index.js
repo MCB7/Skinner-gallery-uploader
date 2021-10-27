@@ -8,6 +8,32 @@ import {useDispatch,useSelector} from 'react-redux'
 
 import {firstAction} from '../Actions/index';
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+}
+
+
+
+const cursor = document.querySelector('.cursor');
+
+      document.addEventListener('mousemove', e => {
+      cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+      })
+
+      document.addEventListener('click', () => {
+      cursor.classList.add("expand");
+
+      setTimeout(() => {
+          cursor.classList.remove("expand");
+      }, 500)
+      }) 
+
 // style
 const GlobalStyle = createGlobalStyle`
  * {
@@ -78,6 +104,7 @@ console.log('this is the state', phrase)
     console.log({result})
   }
   return (
+  
     <div className="App">
       <GlobalStyle />
       <WrapperImage>
@@ -107,6 +134,9 @@ console.log('this is the state', phrase)
         type="file"
         onChange={onChange}
       />    
+        <section className="showcase">
+    <video src="videobg8.mp4"  loop autoPlay muted></video>
+    </section>
     </div>
   );
 }

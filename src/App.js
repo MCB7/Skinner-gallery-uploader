@@ -30,6 +30,7 @@ export default function App() {
     <Route path='/' exact={true} component={Index} />
     <Route path='/' exact={true} component={ContactUs} />
     <Route path='/' exact={true} component={InstaMsgOverlay} />
+    
    
   
     <Route path='backend' exact component={Backend} />
