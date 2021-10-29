@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import { Storage } from 'aws-amplify'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
-
+import OfffadeIMG from './IMGfade';
+import OverlayonImageON from './ImageOverlayON'
+import OverlayonImageOFF from './ImageOverlayOFF'
 //dispatches the action you exported from actions index
 import {useDispatch,useSelector} from 'react-redux'
 
@@ -103,21 +105,65 @@ console.log('this is the state', phrase)
     const result = await Storage.remove(newdetele)
     console.log({result})
   }
+
+  async function lightboxView (e,image){
+    //split the image att the slashes
+    let split = image.split('/')
+    console.log('im the split1',split)
+    //assign to new varibale so data is not stale
+     let thisistheword = split[4].split('?')
+    console.log('im the split',thisistheword)
+    //assign new data again to the index in the array that is the image
+    let Deleteme = thisistheword[0];
+    //reaplce all % with spaces DOES NOTHING FOR NOW REALLY
+    let newdetele = Deleteme.replace(/%/g,' ')
+    //consolelog the image name
+    console.log('im new here',newdetele);
+    const lightboxImage = await Storage.get(newdetele)
+    console.log({lightboxImage})
+  }
   return (
   
     <div className="App">
+    
       <GlobalStyle />
       <WrapperImage>
+      <div id = "overlayImage" onClick={OverlayonImageOFF} style={{cursor: "none",  height: 'auto',  maxWidth: '100%'}}  onMouseUp={OfffadeIMG}>
+   
+        </div>
+     
       {/* GALLERY IMAGES */}
+      
+    
         {
           images.map(image => (
+           <div className="hover14 column">
+           <figure>
             <img
+
               src={image}
               key={image}
-              style={{width: 500, height: 500}}             
+              
+          
+              style={{width: 500, height: 500}}
+              onClick={OverlayonImageON}  
+                
+                      
             />
+           </figure>
+           </div>
           ))
         }
+        
+    
+       
+        
+        
+       
+            
+           
+            
+        
 {/* DELETING GALLERY */}
         {
           images.map(image => (

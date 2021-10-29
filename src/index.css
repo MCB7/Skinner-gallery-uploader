@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
 body {
+  
   margin: 1rem;
   cursor: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,6 +19,9 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+
+
+
 img {
   border-radius:5%;
 }
@@ -27,6 +33,48 @@ html {
   background-repeat: no-repeat;
   background-color: black;
   z-index: 1;
+}
+
+/* Shine */
+.hover14 figure {
+	position: relative;
+}
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -95%;
+	z-index: 1;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+	-webkit-animation: shine 1s;
+	animation: shine 1s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+figure {
+	
+	margin: 0;
+	padding: 0;
+
+	overflow: hidden;
+  border-radius: 5%;
 }
 
 
@@ -97,6 +145,7 @@ code {
  media querie heading to be down, iphone x has screen blockage/
 */
 #overlayM {
+  
   position: fixed;
   display: none;
   width: 100%;
@@ -118,8 +167,8 @@ transition: 0.5s;
 #overlayM:hover {
   --d: 100%;
   background: rgb(138,58,185);
-  background: linear-gradient(184deg, rgba(138,58,185,1) 0%,rgb(205, 72,107) 50%, rgba(252,204,99,1) 100%);
-  filter: invert(1);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 5%, rgba(22,66,136,1) 36%, rgba(107,230,234,1) 96%);
+ 
   
   
   
@@ -127,8 +176,8 @@ transition: 0.5s;
 } 
 
 #overlayM:not( :hover ){ 
-  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
- 
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  filter: invert(1);
   }
 
 #form {
@@ -140,6 +189,7 @@ transition: 0.5s;
 
 
 #overlayC {
+  
   position: fixed;
   display: none;
   width: 100%;
@@ -168,14 +218,46 @@ transition: 0.5s;
 } 
 
 #overlayC:not( :hover ){ 
-  background-color: rgb(5, 5, 5) ;
+  background: linear-gradient(184deg, rgba(138,58,185,1) 0%,rgb(205, 72,107) 50%, rgba(252,204,99,1) 100%);
   color: rgb(255, 255, 255);
   filter: invert(1);
   }
 
 
+  #overlayImage {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(1,1,1,1);
+    z-index: 2;
+    cursor: pointer;
+     background:
+     repeating-linear-gradient(black 10px 10px, transparent 70px 20px) left /var(--d, 0) 100% no-repeat,
+     repeating-linear-gradient(transparent 10px 10px, black 70px 20px) right/var(--d, 0) 100% no-repeat;
+  transition: 0.5s; 
+  }
+
+  #overlayImage:hover {
+    --d: 100%;
+    color: #fff
+    
+  } 
+
+  #overlayImage:not( :hover ){ 
+    background-color: rgb(0, 0, 0) ;
+    color: rgb(255, 255, 255);
+    filter: invert(1);
+    }
+ 
+
 
 #overlay {
+  font-family: 'Permanent Marker', sans-serif;
   position: fixed;
   display: none;
   width: 100%;
@@ -334,6 +416,7 @@ background-color: transparent;
   color: black;
   z-index: 2;
 }
+
 
 
 /* <><><> MEDIA QUERIES<><><> */
