@@ -11,15 +11,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll; /* Add the ability to scroll */
   height: 100vh;
+  width:100vw;
+  
 
 
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-
+/* Hide scrollbar for IE, Edge add Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
 
 
 img {
@@ -375,6 +387,7 @@ background-color: transparent;
 /* VIDEO RAINDROP BACKGROUND */
   .showcase video
 {
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -417,7 +430,11 @@ background-color: transparent;
   z-index: 2;
 }
 
-
+#lightbox-img {
+  height: 80vh;
+  max-width: 90vw;
+  object-fit: cover;
+}
 
 /* <><><> MEDIA QUERIES<><><> */
 /* 
@@ -499,4 +516,17 @@ background-color: transparent;
   
   /* CSS */
   
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video{
+      width:100%;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  video { 
+      width:auto;
+      height: 100%;
+  }
 }

@@ -14,6 +14,7 @@ import  InstaMsgOverlay from './Componets/InstaMsgIconOverlay'
 import  Overlay from './Componets/Overlay'
 import './index.css'; 
 
+import disableScrollFox from './Componets/hideScrollFireFox';
 
 
 
@@ -26,6 +27,8 @@ export default function App() {
   <div> 
   <BrowserRouter>
   {/* base route and componets */}
+    
+    
     <Route path='/' exact={true} component={AppGallery} />
     <Route path='/' exact={true} component={Index} />
     <Route path='/' exact={true} component={ContactUs} />

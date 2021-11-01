@@ -9,6 +9,7 @@ import OverlayonImageOFF from './ImageOverlayOFF'
 import {useDispatch,useSelector} from 'react-redux'
 
 import {firstAction} from '../Actions/index';
+import disableScrollFox from './hideScrollFireFox.js'
 
 window.onscroll = function() {scrollFunction()};
 
@@ -64,6 +65,8 @@ console.log('this is the state', phrase)
   //we assign dispatch to a new variable
   const dispatch = useDispatch()
   const [images, setImages] = useState([])
+  const [imageBox, setImagebox] = useState([])
+ 
   useEffect(() => {
     // we dispatch the action here just for the first time
     dispatch(firstAction('hi there morgan im the first action'));
@@ -80,6 +83,10 @@ console.log('this is the state', phrase)
     setImages(imageKeys)
   }
 
+  
+  
+  
+
   async function onChange(e) {
     const file = e.target.files[0];
     const result = await Storage.put(file.name, file, {
@@ -88,6 +95,8 @@ console.log('this is the state', phrase)
     console.log({ result })
     fetchImages()
   }
+
+ 
   async function deleteAnImageconsole(e,image){
     //split the image att the slashes
     let split = image.split('/')
@@ -106,7 +115,7 @@ console.log('this is the state', phrase)
     console.log({result})
   }
 
-  async function lightboxView (e,image){
+  async function test(e,image){
     //split the image att the slashes
     let split = image.split('/')
     console.log('im the split1',split)
@@ -119,17 +128,32 @@ console.log('this is the state', phrase)
     let newdetele = Deleteme.replace(/%/g,' ')
     //consolelog the image name
     console.log('im new here',newdetele);
-    const lightboxImage = await Storage.get(newdetele)
-    console.log({lightboxImage})
-  }
-  return (
-  
-    <div className="App">
+    //delete that image
+    const result1 = await Storage.get(newdetele)
     
+    
+    document.getElementById("imageid").src=result1;
+    console.log(result1)
+  
+    document.getElementById("overlayImage").style.display = "block";
+    document.getElementById("overlayImage").style.opacity = "1"
+    document.getElementById("overlayImage").style.visibility = "visible";
+  }
+
+ 
+
+  
+  return (
+ 
+    <div className="App">
+   
       <GlobalStyle />
       <WrapperImage>
       <div id = "overlayImage" onClick={OverlayonImageOFF} style={{cursor: "none",  height: 'auto',  maxWidth: '100%'}}  onMouseUp={OfffadeIMG}>
-   
+
+      <img id="imageid"/>
+
+
         </div>
      
       {/* GALLERY IMAGES */}
@@ -139,19 +163,15 @@ console.log('this is the state', phrase)
           images.map(image => (
            <div className="hover14 column">
            <figure>
-            <img
-
+           <img
               src={image}
               key={image}
-              
-          
               style={{width: 500, height: 500}}
-              onClick={OverlayonImageON}  
-                
-                      
+              onClick={(e)=>{test(e,image) }}             
             />
            </figure>
            </div>
+           
           ))
         }
         
