@@ -151,7 +151,7 @@ console.log('this is the state', phrase)
       <WrapperImage>
       <div id = "overlayImage" onClick={OverlayonImageOFF} style={{cursor: "none",  height: 'auto',  maxWidth: '100%'}}  onMouseUp={OfffadeIMG}>
 
-      <img id="imageid"/>
+      <img className="Image-Overlay-center" id="imageid"/>
 
 
         </div>
