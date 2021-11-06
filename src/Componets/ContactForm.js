@@ -3,6 +3,9 @@ import React from 'react';
 import  MessageOverlayOff from './OverlayM';
 import  OfffadeM from './Mfade';
 import MessageOverlayOn from './OverlayM-on';
+import Spritesheet from 'react-responsive-spritesheet';
+
+import sheet from '../assets/thankyou.png'
 
 export default function ContactUs() {
 
@@ -29,7 +32,7 @@ export default function ContactUs() {
         
         <div>
             
-            <div id = {"overlayM"} onClick={MessageOverlayOff} style={{cursor: "none"}}  onMouseUp={OfffadeM}>
+            <div id = {"overlayM"} onClick={MessageOverlayOff} style={{cursor: 'url(./assets/scursor1.svg)'}}  onMouseUp={OfffadeM}>
 
             <div class="text-slideshow">
              <h2 class="item-1" style={{fontFamily:"Permanent Marker", fontSize:" 3em"}}>Questions?</h2>
@@ -38,7 +41,7 @@ export default function ContactUs() {
  
  <h2 class="item-3" style={{fontFamily:"Permanent Marker", fontSize:" 3em"}}>Fill out the form below!</h2>
  </div>
-           <div id={"form"} className="containerTextBox" >
+           <div id={"form"} className="containerTextBox" style={{cursor:'url(./assets/scursor1.svg)'}} >
             <form onSubmit={sendEmail} onClick={MessageOverlayOn} >
      
                   
@@ -62,8 +65,32 @@ export default function ContactUs() {
                        
                    
                 </form>
+            
             </div>
-        </div>
+            <Spritesheet
+
+image={sheet}
+
+widthFrame={296.5}
+heightFrame={73.5}
+
+steps={30}
+fps={15}
+autoplay={true}
+loop={true}
+isResponsive={false}
+direction={`forward`}
+style={{
+display: 'block',
+marginLeft: 'auto',
+marginRight: 'auto',
+width:'50%'
+
+}}
+
+/>
+           
+            </div>
         </div>
          
         

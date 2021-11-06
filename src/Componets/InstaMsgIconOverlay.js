@@ -19,10 +19,10 @@ export default function InstaMsgOverlay() {
         
         <div>
             
-            <div id = {"overlayC"} onClick={contactOverlayOff} style={{cursor: "none"}}  onMouseUp={OfffadeC}>
-            <div id="text1" onClick={contactOverlayOff} style={{cursor: "none"}} className="allsides-6"><img src={instaicon} className="icons"></img></div>
+            <div id = {"overlayC"} onClick={contactOverlayOff} style={{cursor: 'url(./assets/scursor1.svg)'}}  onMouseUp={OfffadeC}>
+            <div id="text1" onClick={contactOverlayOff} style={{cursor: 'url(./assets/scursor1.svg)'}}  className="allsides-6"><img src={instaicon} className="icons"></img></div>
             
-            <div id="text2" onClick={messageOverlayon} style={{cursor: "none"}} className="allsides-6" className="message"><img src={contacticon} className="icons"></img></div>
+            <div id="text2" onClick={messageOverlayon} style={{cursor: 'url(./assets/scursor1.svg)'}}  className="allsides-6" className="message"><img src={contacticon} className="icons"></img></div>
             </div>
 
         </div>

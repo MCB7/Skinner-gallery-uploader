@@ -17,7 +17,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
     document.getElementById("navbar").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-100px";
+    document.getElementById("navbar").style.top = "-120px";
   }
 }
 
@@ -149,12 +149,10 @@ console.log('this is the state', phrase)
    
       <GlobalStyle />
       <WrapperImage>
-      <div id = "overlayImage" onClick={OverlayonImageOFF} style={{cursor: "none",  height: 'auto',  maxWidth: '100%'}}  onMouseUp={OfffadeIMG}>
+      <div id = "overlayImage" onClick={OverlayonImageOFF} style={{cursor: 'url(./assets/scursor1.svg)',  height: 'auto',  maxWidth: '100%'}}  onMouseUp={OfffadeIMG}>
 
-      <img className="Image-Overlay-center" id="imageid"/>
-
-
-        </div>
+      <img className="Image-Overlay-center" id="imageid" style={{maxHeight: '100%'}}/>
+      </div>
      
       {/* GALLERY IMAGES */}
       
@@ -166,7 +164,7 @@ console.log('this is the state', phrase)
            <img
               src={image}
               key={image}
-              style={{width: 500, height: 500}}
+              style={{width: 700, height: 500}}
               onClick={(e)=>{test(e,image) }}             
             />
            </figure>
