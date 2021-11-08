@@ -28,7 +28,6 @@ ReactDOM.render(
   <Provider store={store} >,
   <React.StrictMode>,
     <App />,
-    <Overlay />
   </React.StrictMode>,
   </Provider>,
   document.getElementById('root')

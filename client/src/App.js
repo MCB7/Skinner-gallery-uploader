@@ -6,12 +6,13 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 
 import Index from './Componets/Index';
-import AboutMe from './Componets/Aboutme'
-import AppGallery from './AppGallery'
-import Backend from './Componets/Backend'
+import AboutMe from './Componets/Aboutme';
+import AppGallery from './AppGallery';
+import Backend from './Componets/Backend';
 import ContactUs from './Componets/ContactForm';
-import  InstaMsgOverlay from './Componets/InstaMsgIconOverlay'
-import  Overlay from './Componets/Overlay'
+import  InstaMsgOverlay from './Componets/InstaMsgIconOverlay';
+import  Overlay from './Componets/Overlay';
+import Login from './Componets/Login';
 import './index.css'; 
 
 import disableScrollFox from './Componets/hideScrollFireFox';
@@ -33,10 +34,10 @@ export default function App() {
     <Route path='/' exact={true} component={Index} />
     <Route path='/' exact={true} component={ContactUs} />
     <Route path='/' exact={true} component={InstaMsgOverlay} />
+
+    <Route path='/login' exact component={Login} />
     
-   
-  
-    <Route path='backend' exact component={Backend} />
+    <Route path='/backend' exact component={Backend} />
     
     <Route path='/aboutme' component={AboutMe} exact firsttnamne={nameish} />
    
