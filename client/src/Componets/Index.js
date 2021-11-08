@@ -11,17 +11,17 @@ import {useDispatch,useSelector} from 'react-redux'
 import {Link} from 'react-router-dom';
 
 import {firstAction} from '../Actions/index';
-import disableScrollFox from './hideScrollFireFox.js'
+// import disableScrollFox from './hideScrollFireFox.js'
 
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-120px";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-120px";
+//   }
+// }
 
 
 
@@ -197,13 +197,16 @@ console.log('this is the state', phrase)
         }  
       </WrapperImage>
 
-      <Link to="/login" >click me to login </Link>
+      <button>
+      <Link to="/login" > click me to login w google</Link>
+        </button>
+      
       <input
         type="file"
         onChange={onChange}
       />    
         <section className="showcase">
-    <video src="videobg8.mp4"  loop autoPlay muted></video>
+    {/* <video src="videobg8.mp4"  loop autoPlay muted></video> */}
     </section>
     </div>
   );

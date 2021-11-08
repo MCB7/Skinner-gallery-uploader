@@ -13,7 +13,7 @@ const passport = require("passport");
         passport.authenticate('google'),
         //  where the request will be redirected to
         (req,res)=>{
-            res.redirect("/surveys")
+            res.redirect("/backend")
         }
     )
 
