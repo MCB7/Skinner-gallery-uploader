@@ -15,6 +15,7 @@ User.findById(id)
 .then(user=> {done(null,user)})
 })
 //we deserialize what we had serialized before in this case the id
+//adds to the request object as req.user on the server side.
 
 
 passport.use(

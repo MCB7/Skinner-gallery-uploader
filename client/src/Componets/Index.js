@@ -8,6 +8,8 @@ import OverlayonImageOFF from './ImageOverlayOFF'
 //dispatches the action you exported from actions index
 import {useDispatch,useSelector} from 'react-redux'
 
+import {Link} from 'react-router-dom';
+
 import {firstAction} from '../Actions/index';
 import disableScrollFox from './hideScrollFireFox.js'
 
@@ -194,6 +196,8 @@ console.log('this is the state', phrase)
           ))
         }  
       </WrapperImage>
+
+      <Link to="/login" >click me to login </Link>
       <input
         type="file"
         onChange={onChange}
