@@ -15,6 +15,11 @@ export default function ContactUs() {
     emailjs.sendForm('service_hdrytq8', 'template_4t58w5h', e.target, 'user_s91Br6tqZ1rGYwilylk8K')
         .then((result) => {
             console.log(result.text);
+            if (result.text === 'OK') {
+                console.log('hello');
+                document.getElementById('thankyoumessage').style.display="block";
+                setTimeout(function(){document.getElementById('thankyoumessage').style.display="none"}, 3000);
+            }
             
         }, (error) => {
             console.log(error.text);
@@ -67,6 +72,7 @@ export default function ContactUs() {
                 </form>
             
             </div>
+            <div id={"thankyoumessage"}>
             <Spritesheet
 
 image={sheet}
@@ -74,14 +80,14 @@ image={sheet}
 widthFrame={296.5}
 heightFrame={73.5}
 
-steps={30}
+steps={31}
 fps={15}
 autoplay={true}
 loop={true}
 isResponsive={false}
 direction={`forward`}
 style={{
-display: 'block',
+
 marginLeft: 'auto',
 marginRight: 'auto',
 width:'50%'
@@ -89,6 +95,7 @@ width:'50%'
 }}
 
 />
+</div>
            
             </div>
         </div>

@@ -689,3 +689,6 @@ div.containerTextBox {
   }
 }
 
+#thankyoumessage {
+  display:none;
+}
