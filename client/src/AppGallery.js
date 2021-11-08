@@ -66,6 +66,7 @@ class AppGallery extends Component {
               display: 'block',
               margin: 'auto',
               width: '25%',
+              
 
 
             }}
@@ -164,6 +165,8 @@ class AppGallery extends Component {
             display: 'block',
             margin: 'auto',
             width: '50%',
+            cursor: 'pointer'
+
 
 
           }}
