@@ -147,6 +147,7 @@ console.log('this is the state', phrase)
     document.getElementById("overlayImage").style.visibility = "visible";
   }
 
+  
 
   
   return (
@@ -174,7 +175,7 @@ console.log('this is the state', phrase)
               
               src={image}
               key={image}
-              
+              className="img"
               onClick={(e)=>{test(e,image) }}
               
                   

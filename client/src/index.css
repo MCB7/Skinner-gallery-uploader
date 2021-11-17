@@ -717,14 +717,19 @@ div.containerTextBox {
 }
 
 .afterimage__placeholder {
-  display: block;
+ 
   height: 500px;
-  width: 700px;
+
+ 
+  
+}
+.img{
+  
+  border-radius: 6%
 }
 
-.img {
-  height: 100%;
-  width: 100%;
-
+.afterimage__image{
+  height: 500px;
+ 
 }
 
