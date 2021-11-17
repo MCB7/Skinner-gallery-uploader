@@ -16,6 +16,7 @@ import reportWebVitals from './reportWebVitals';
 import ContactUs from './Componets/ContactForm'
 import Overlay from './Componets/ContactOverlay'
 import InstaMsgOverlay from './Componets/InstaMsgIconOverlay'
+import Loader from './Componets/Loader';
 
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
@@ -25,8 +26,10 @@ Amplify.configure(config);
 const store = createStore(reducers)
 //wrap app in the provider tag and pass in the create store.
 ReactDOM.render(
+  
   <Provider store={store} >,
   <React.StrictMode>,
+    <Loader />,
     <App />,
     <Overlay />,
   </React.StrictMode>,

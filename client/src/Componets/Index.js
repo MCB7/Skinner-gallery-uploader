@@ -8,24 +8,29 @@ import OverlayonImageOFF from './ImageOverlayOFF'
 //dispatches the action you exported from actions index
 import {useDispatch,useSelector} from 'react-redux'
 
+
 import {Link} from 'react-router-dom';
 
 import {firstAction} from '../Actions/index';
-// import disableScrollFox from './hideScrollFireFox.js'
-
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-120px";
-//   }
-// }
+import AfterImage from "afterimage";
 
 
 
-const cursor = document.querySelector('.cursor');
+window.onscroll = function() {scrollFunction()};
+
+ function scrollFunction() {
+   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
+    document.getElementById("navbar").style.top = "0px";
+  } else {
+  document.getElementById("navbar").style.top = "-120px";
+  
+ }
+ }
+
+  
+
+ 
+      const cursor = document.querySelector('.cursor');
 
       document.addEventListener('mousemove', e => {
       cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
@@ -142,7 +147,6 @@ console.log('this is the state', phrase)
     document.getElementById("overlayImage").style.visibility = "visible";
   }
 
- 
 
   
   return (
@@ -162,14 +166,22 @@ console.log('this is the state', phrase)
         {
           images.map(image => (
            <div className="hover14 column">
+             <div className="img">
            <figure>
-           <img
+           
+           <AfterImage
+            
+              
               src={image}
               key={image}
-              style={{width: 700, height: 500}}
-              onClick={(e)=>{test(e,image) }}             
+              
+              onClick={(e)=>{test(e,image) }}
+              
+                  
             />
+            
            </figure>
+           </div>
            </div>
            
           ))
@@ -184,7 +196,7 @@ console.log('this is the state', phrase)
            
             
         
-{/* DELETING GALLERY */}
+{/* DELETING GALLERY
         {
           images.map(image => (
             <img
@@ -194,19 +206,16 @@ console.log('this is the state', phrase)
               onClick={(e)=>{deleteAnImageconsole(e,image) }}             
             />
           ))
-        }  
+        }   */}
       </WrapperImage>
 
-      <button>
-      <Link to="/login" > click me to login w google</Link>
+      <button style={{fontFamily:"Permanent Marker", fontSize:" 1em"}}>
+      <Link to="/login" >?</Link>
         </button>
       
-      <input
-        type="file"
-        onChange={onChange}
-      />    
+ 
         <section className="showcase">
-    {/* <video src="videobg8.mp4"  loop autoPlay muted></video> */}
+    {<video src="videobg8.mp4"  loop autoPlay muted></video>}
     </section>
     </div>
   );

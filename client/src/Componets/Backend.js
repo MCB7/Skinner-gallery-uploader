@@ -49,6 +49,7 @@ export default function Backend(){
   }
   return(
   <div>
+    <div id="navbar"></div>
   I'm the back end!
   {/* DELETING GALLERY */}
   {

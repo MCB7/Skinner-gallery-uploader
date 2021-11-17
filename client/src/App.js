@@ -10,6 +10,7 @@ import AboutMe from './Componets/Aboutme';
 import AppGallery from './AppGallery';
 import Backend from './Componets/Backend';
 import ContactUs from './Componets/ContactForm';
+
 import  InstaMsgOverlay from './Componets/InstaMsgIconOverlay';
 import  Overlay from './Componets/Overlay';
 import Login from './Componets/Login';
@@ -31,9 +32,11 @@ export default function App() {
     
     
     <Route path='/' exact={true} component={AppGallery} />
+    
     <Route path='/' exact={true} component={Index} />
     <Route path='/' exact={true} component={ContactUs} />
     <Route path='/' exact={true} component={InstaMsgOverlay} />
+    
 
     <Route path='/login' exact component={Login} />
     
