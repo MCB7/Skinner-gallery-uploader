@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
+
+
 body {
   
   margin: 1rem;
@@ -733,3 +735,64 @@ div.containerTextBox {
  
 }
 
+/* <><><>FADE IN HEADER TITLE<><><> */
+.fade-in {
+  animation: fadeIn ease-out 2s;
+  -webkit-animation: fadeIn ease-out 2s;
+  -moz-animation: fadeIn ease-out 2s;
+  -o-animation: fadeIn ease-out 2s;
+  -ms-animation: fadeIn ease-out 2s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+/* <><><>FOOTER<><><> */
+a {
+  color: #FFF;
+  background-color: black;
+  text-decoration: none;
+}
+p {text-align: center;}

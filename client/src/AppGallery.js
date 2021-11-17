@@ -36,7 +36,7 @@ class AppGallery extends Component {
             isResponsive={true}
             direction={`forward`}
 
-
+           
 
             onClick={spritesheet => {
               spritesheet.play();
@@ -84,7 +84,7 @@ class AppGallery extends Component {
 
           widthFrame={1006}
           heightFrame={285}
-
+          className={'style fade-in'}  
           steps={11}
           fps={11}
           autoplay={true}
@@ -102,6 +102,7 @@ class AppGallery extends Component {
           image={sheet1}
           widthFrame={694}
           heightFrame={158}
+          className={'style fade-in'}  
           steps={10}
           fps={10}
           autoplay={true}
@@ -125,6 +126,7 @@ class AppGallery extends Component {
 
         <Spritesheet
           className={`buttonpadding`}
+          className={'style fade-in'}  
           image={sheet2}
           widthFrame={234.5}
           heightFrame={57}

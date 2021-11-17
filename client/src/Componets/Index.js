@@ -209,11 +209,14 @@ console.log('this is the state', phrase)
           ))
         }   */}
       </WrapperImage>
-
-      <button style={{fontFamily:"Permanent Marker", fontSize:" 1em"}}>
-      <Link to="/login" >?</Link>
-        </button>
+      <footer>
       
+       
+        <p style={{fontFamily:"Permanent Marker", fontSize:" 1em", color:'white'}}>Artifice Development © 2022 
+      <Link to="/login" style={{ textDecoration: "none" }} >◎</Link>
+       </p>
+  
+        </footer>
  
         <section className="showcase">
     {<video src="videobg8.mp4"  loop autoPlay muted></video>}
