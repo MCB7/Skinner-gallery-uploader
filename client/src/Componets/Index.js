@@ -8,29 +8,27 @@ import OverlayonImageOFF from './ImageOverlayOFF'
 //dispatches the action you exported from actions index
 import {useDispatch,useSelector} from 'react-redux'
 
-
 import {Link} from 'react-router-dom';
 
-import {firstAction} from '../Actions/index';
-import AfterImage from "afterimage";
+import {firstAction, fetchUser} from '../Actions/index';
+
+// import disableScrollFox from './hideScrollFireFox.js'
 
 
 
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
- function scrollFunction() {
-   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
-    document.getElementById("navbar").style.top = "0px";
-  } else {
-  document.getElementById("navbar").style.top = "-120px";
-  
- }
- }
+// function scrollFunction() {
+//   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-120px";
+//   }
+// }
 
-  
 
- 
-      const cursor = document.querySelector('.cursor');
+
+const cursor = document.querySelector('.cursor');
 
       document.addEventListener('mousemove', e => {
       cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
@@ -76,6 +74,7 @@ console.log('this is the state', phrase)
  
   useEffect(() => {
     // we dispatch the action here just for the first time
+    dispatch(fetchUser())
     dispatch(firstAction('hi there morgan im the first action'));
     fetchImages()
   }, [])
@@ -147,13 +146,13 @@ console.log('this is the state', phrase)
     document.getElementById("overlayImage").style.visibility = "visible";
   }
 
-  
+ 
 
   
   return (
- 
+    
     <div className="App">
-   
+      <Link to='/auth/google' />
       <GlobalStyle />
       <WrapperImage>
       <div id = "overlayImage" onClick={OverlayonImageOFF} style={{cursor: 'url(./assets/scursor1.svg)',  height: 'auto',  maxWidth: '100%'}}  onMouseUp={OfffadeIMG}>
@@ -167,22 +166,14 @@ console.log('this is the state', phrase)
         {
           images.map(image => (
            <div className="hover14 column">
-             <div className="img">
            <figure>
-           
-           <AfterImage
-            
-              
+           <img
               src={image}
               key={image}
-              className="img"
-              onClick={(e)=>{test(e,image) }}
-              
-                  
+              style={{width: 700, height: 500}}
+              onClick={(e)=>{test(e,image) }}             
             />
-            
            </figure>
-           </div>
            </div>
            
           ))
@@ -197,7 +188,7 @@ console.log('this is the state', phrase)
            
             
         
-{/* DELETING GALLERY
+{/* DELETING GALLERY */}
         {
           images.map(image => (
             <img
@@ -207,19 +198,19 @@ console.log('this is the state', phrase)
               onClick={(e)=>{deleteAnImageconsole(e,image) }}             
             />
           ))
-        }   */}
+        }  
       </WrapperImage>
-      <footer>
+
+      <button>
+      <Link to="/login" > click me to login w google</Link>
+        </button>
       
-       
-        <p style={{fontFamily:"Permanent Marker", fontSize:" 1em", color:'white'}}>Artifice Development © 2022 
-      <Link to="/login" style={{ textDecoration: "none" }} >◎</Link>
-       </p>
-  
-        </footer>
- 
+      <input
+        type="file"
+        onChange={onChange}
+      />    
         <section className="showcase">
-    {<video src="videobg8.mp4"  loop autoPlay muted></video>}
+    <video src="videobg8.mp4"  loop autoPlay muted></video>
     </section>
     </div>
   );

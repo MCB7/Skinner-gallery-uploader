@@ -20,10 +20,11 @@ import Loader from './Componets/Loader';
 
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
+import reduxThunk from 'redux-thunk'
 Amplify.configure(config);
 
 //typically takes in tthe reducers and middleware
-const store = createStore(reducers)
+const store = createStore(reducers,{}, applyMiddleware(reduxThunk))
 //wrap app in the provider tag and pass in the create store.
 ReactDOM.render(
   
