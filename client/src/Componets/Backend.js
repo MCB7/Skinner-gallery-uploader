@@ -1,14 +1,24 @@
 import React,{useState, useEffect} from 'react';
 import { Storage } from 'aws-amplify'
+import { fetchUser } from '../Actions';
+import {useSelector,useDispatch} from 'react-redux'
 
 
 
 export default function Backend(){
 
+  const auth = useSelector(state => state.auth)
+  //this is the google id
+  if(auth){
+    console.log(auth.googleId,'this is the auth')
+  }else console.log('else',auth)
+  
+const dispatch = useDispatch()
   const [images, setImages] = useState([])
   useEffect(() => {
     // we dispatch the action here just for the first time
   fetchImages()
+  dispatch(fetchUser())
   }, [])
 
   async function fetchImages() {
@@ -47,25 +57,51 @@ export default function Backend(){
     const result = await Storage.remove(newdetele)
     console.log({result})
   }
+  const checkIfLoggedin= () =>{
+    if(typeof(auth) === undefined){
+      console.log(auth)
+    }
+    if(auth){
+      return images.map(image => (
+        <img
+        src={image}
+        key={image}
+        onClick={(e)=>{deleteAnImageconsole(e,image) }}             
+        />
+        ))
+    }else return <div></div>
+  }
+  const checkIfLoggedin2= () =>{
+    if(auth)
+    return <input
+    type="file"
+    onChange={onChange}
+    /> 
+
+  }
   return(
+   
   <div>
     <div id="navbar"></div>
-  I'm the back end!
-  {/* DELETING GALLERY */}
-  {
-          images.map(image => (
-            <img
-              src={image}
-              key={image}
-              onClick={(e)=>{deleteAnImageconsole(e,image) }}             
-            />
-          ))
-        }  
-      
-      <input
-        type="file"
-        onChange={onChange}
+    I'm the back end!
+    {/* DELETING GALLERY */}
+  
+  {checkIfLoggedin()}
+  {checkIfLoggedin2()}
+    
+    {/* {     
+      images.map(image => (
+      <img
+      src={image}
+      key={image}
+      onClick={(e)=>{deleteAnImageconsole(e,image) }}             
       />
+      )) 
+    }      
+    <input
+    type="file"
+    onChange={onChange}
+    /> */}
   </div>
   )
 }
