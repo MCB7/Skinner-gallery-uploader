@@ -95,6 +95,11 @@ class AppGallery extends Component {
             spritesheet.goToAndPlay(1)
 
           }}
+          style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+          }}
 
         />
 
@@ -136,6 +141,7 @@ class AppGallery extends Component {
           loop={true}
           isResponsive={true}
           direction={`forward`}
+          
 
 
 
@@ -167,8 +173,9 @@ class AppGallery extends Component {
             display: 'block',
             margin: 'auto',
             width: '50%',
-            cursor: 'pointer'
-
+            cursor: 'pointer',
+            paddingTop:'1.25em' //this needs to be media queried
+           
 
 
           }}
