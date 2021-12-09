@@ -737,11 +737,11 @@ div.containerTextBox {
 
 /* <><><>FADE IN HEADER TITLE<><><> */
 .fade-in {
-  animation: fadeIn ease-out 2s;
-  -webkit-animation: fadeIn ease-out 2s;
-  -moz-animation: fadeIn ease-out 2s;
-  -o-animation: fadeIn ease-out 2s;
-  -ms-animation: fadeIn ease-out 2s;
+  animation: fadeIn ease-out 3s;
+  -webkit-animation: fadeIn ease-out 3s;
+  -moz-animation: fadeIn ease-out 3s;
+  -o-animation: fadeIn ease-out 3s;
+  -ms-animation: fadeIn ease-out 3s;
 }
 
 

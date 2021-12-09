@@ -12,19 +12,18 @@ import {Link} from 'react-router-dom';
 
 import {firstAction, fetchUser} from '../Actions/index';
 
-// import disableScrollFox from './hideScrollFireFox.js'
+import AfterImage from "afterimage";
 
 
 
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-120px";
-//   }
-// }
+ window.onscroll = function() {scrollFunction()};
+ function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 800) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+   document.getElementById("navbar").style.top = "-120px";
+  }
+ }
 
 
 
@@ -167,7 +166,7 @@ console.log('this is the state', phrase)
           images.map(image => (
            <div className="hover14 column">
            <figure>
-           <img
+           <AfterImage 
               src={image}
               key={image}
               style={{width: 700, height: 500}}
@@ -187,28 +186,20 @@ console.log('this is the state', phrase)
             
            
             
-        
-{/* DELETING GALLERY */}
-        {
-          images.map(image => (
-            <img
-              src={image}
-              key={image}
-              style={{width: 500, height: 500}}
-              onClick={(e)=>{deleteAnImageconsole(e,image) }}             
-            />
-          ))
-        }  
+
       </WrapperImage>
 
-      <button>
-      <Link to="/login" > click me to login w google</Link>
-        </button>
+     
       
-      <input
-        type="file"
-        onChange={onChange}
-      />    
+   
+<footer>
+
+
+<p style={{fontFamily:"Permanent Marker", fontSize:" 1em", color:'white'}}>Artifice Development © 2022 
+<Link to="/login" style={{ textDecoration: "none" }} >◎</Link>
+</p>
+
+</footer>
         <section className="showcase">
     <video src="videobg8.mp4"  loop autoPlay muted></video>
     </section>
