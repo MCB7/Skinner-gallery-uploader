@@ -1,0 +1,1 @@
+Alexis Skinner is a hair stylist based in Seattle, Washington.  She wanted a simple website to display her work and have a way for potential clients to contact her for appointments or questions. This was my first outside-of-school project while I was in my Certificate program at Seattle Central and I have learned so much since.
